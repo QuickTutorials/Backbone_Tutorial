@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>Backbone Tutorial; Views and Templates</title>
+<script src="./js/lib/jquery.min.js" type="text/javascript"> </script>
+
+<script type="text/html" id="template-branch">
+    	<ul class="treeview">
+    	<% _.each(b, function(i,e) { %>  
+		<% if(typeof i == "object"){ %>
+			<li class=<%= "'submenu open "+counter+"'" %> >
+			<%= e %><%= _.template($('#template-branch').html())({ b: i,counter:(counter*100) }) %></li>
+		<% }else{ %>
+			<li><%= e %></li> 
+		<% counter++; } %>
+    	<% }); %>
+    	</ul>
+</script>
+<script type="text/html" id="template-tree">
+  <div class='tree'>
+    <!-- <strong><%= name %></strong><br /> -->
+    <!-- <span><%= email %></span> -->
+    <ul class="treeview">
+	<% var counter=1; %>
+    	<% _.each(items, function(i,e) { %>  
+		<% if(typeof i == "object"){ %>
+			<li class=<%= "'submenu open "+counter+"'" %> >
+			<%= e %><%= _.template($('#template-branch').html())({ b: i,counter:(counter*100) }) %></li>
+		<% }else{ %>
+			<li><%= e %></li> 
+		<% counter++; } %>
+    	<% }); %>
+    <ul>
+  </div>
+</script>
+
+</head>
+<body>
+	<div id="tree1"></div>
+	<link rel="stylesheet" type="text/css" href="css/simpletree.css" /> 
+	<script src="./js/lib/underscore-min.js" type= "text/javascript"> </script>
+	<script src="./js/lib/backbone-min.js" type= "text/javascript"> </script>
+	<script type="text/javascript" src="js/tree.js"> </script>
+</body>
+</html>

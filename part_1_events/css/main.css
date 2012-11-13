@@ -1,0 +1,8 @@
+body{
+	background-color:#5b8255;
+}
+table{border-spacing:0px;}
+table th{
+	text-align:left;
+	background-color:grey;
+}

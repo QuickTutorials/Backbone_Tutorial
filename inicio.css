@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	height: 50px;
+	background: url('images/logo-header.png') no-repeat;
+}
+
+.logo p {
+	text-indent: -9999px;
+}
+
+.contenedor {
+	position: relative;
+	margin: 5px auto;
+	width: 1020px;
+}
+
+.contenedor p {
+	font-size: 20px;
+	color: #4FABDC;
+}
+
+.contenedor a, .contenedor a:hover, .contenedor a:visited, .contenedor a:active, .contenedor a:link{
+	text-decoration: none;
+	color: #8FCE39;
+}
+
+h1 {
+	color: #4FABDC;
+	margin: 0;
+	padding: 5px 0;
+}
+
+h2 {
+	background-color: #C0C0C0;
+	color: #FFFFFF;
+	margin: 10px 0 0 0;
+	padding: 0px 5px;
+}
+
+ul {
+	padding-left: 30px;
+	list-style-type: square;
+}
+
+ul li {
+	margin-bottom: 10px;
+	font-size: 22px;
+	font-weight: bold;
+}

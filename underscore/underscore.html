@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ejemplos de Underscore.js</title>
+		<link rel="stylesheet" href="underscore.css" type="text/css" />
+	</head>
+	<body>
+		<div class="contenedor">
+		<h1>Ejemplos de Underscore.js</h1>
+		<section>
+			<h3>Colecciones (Objetos y Arrays)</h3>
+			<div>
+				<h4>each</h4>
+				<pre>
+	_.each([1, 2, 3], function(element, index) {
+	  console.log(index + ': ' + element);
+	});
+
+	<input type="button" id="ejecutar_each_array" value="Ejecutar" />
+
+	_.each({one : 1, two : 2, three : 3}, function(value, key) {
+	  console.log(key + ': ' + value);
+	});
+
+	<input type="button" id="ejecutar_each_objeto" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>map</h4>
+				<pre>
+	_.map([1, 2, 3], function(num){ return num * 3; });
+	
+	<input type="button" id="ejecutar_map_array" value="Ejecutar" />
+	
+	_.map({four : 4, five : 5, six : 6}, function(num, key){ return num * 3; });
+	
+	<input type="button" id="ejecutar_map_objeto" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>reduce</h4>
+				<pre>
+	_.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
+	
+	<input type="button" id="ejecutar_reduce" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>find / filter</h4>
+				<pre>
+	_.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+	
+	<input type="button" id="ejecutar_find" value="Ejecutar" />
+	
+	_.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+	
+	<input type="button" id="ejecutar_filter" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>contains</h4>
+				<pre>
+	_.contains([1, 2, 3], 3);
+	
+	<input type="button" id="ejecutar_contains" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>pluck</h4>
+				<pre>
+	var clients = [{name : 'moe', age : 40}, {name : 'larry', age : 50}, {name : 'curly', age : 60}];
+	_.pluck(clients, 'name');
+					
+	<input type="button" id="ejecutar_pluck" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>max / min</h4>
+				<pre>
+	var clients = [{name : 'moe', age : 40}, {name : 'larry', age : 50}, {name : 'curly', age : 60}];
+	_.max(clients, function(client){ return client.age; });
+	
+	<input type="button" id="ejecutar_max" value="Ejecutar" />
+	
+	var numbers = [10, 5, 100, 2, 1000];
+	_.min(numbers);
+	
+	<input type="button" id="ejecutar_min" value="Ejecutar" />
+				</pre>
+			</div>
+		</section>
+		<section>
+			<h3>Arrays</h3>
+			<div>
+				<h4>compact</h4>
+				<pre>
+	_.compact([0, 1, false, 2, '', 3]);
+	
+	<input type="button" id="ejecutar_compact" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>without</h4>
+				<pre>
+	_.without([1, 2, 1, 0, 3, 1, 4], 0, 1);
+	
+	<input type="button" id="ejecutar_without" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>union</h4>
+				<pre>
+	_.union([1, 2, 3], [101, 2, 1, 10], [2, 1]);
+	
+	<input type="button" id="ejecutar_union" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>intersection</h4>
+				<pre>
+	_.intersection([1, 2, 3], [101, 2, 1, 10], [2, 1]);
+	
+	<input type="button" id="ejecutar_intersection" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>difference</h4>
+				<pre>
+	_.difference([1, 2, 3, 4, 5], [5, 2, 10]);
+	
+	<input type="button" id="ejecutar_difference" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>uniq</h4>
+				<pre>
+	_.uniq([1, 2, 1, 3, 1, 4]);
+	
+	<input type="button" id="ejecutar_uniq" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>zip</h4>
+				<pre>
+	_.zip(['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]);
+	
+	<input type="button" id="ejecutar_zip" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>range</h4>
+				<pre>
+	_.range(10);
+	
+	<input type="button" id="ejecutar_range" value="Ejecutar" />
+	
+	_.range(1, 11);
+	
+	<input type="button" id="ejecutar_range_indice" value="Ejecutar" />
+	
+	_.range(0, 30, 5);
+	
+	<input type="button" id="ejecutar_range_paso" value="Ejecutar" />
+	
+	_.range(0, -10, -1);
+	
+	<input type="button" id="ejecutar_range_negativo" value="Ejecutar" />
+				</pre>
+			</div>
+		</section>
+		<section>
+			<h3>Funciones</h3>
+			<div>
+				<h4>bind</h4>
+				<pre>
+	var func = function(greeting){ 
+	  return greeting + ': ' + this.name;
+	};
+	
+	var func_bind = _.bind(func, {name : 'moe'}, 'hi');
+	func_bind();
+	
+	<input type="button" id="ejecutar_bind" value="Ejecutar" />
+	
+	var func = function(greeting){ 
+	  return greeting + ': ' + this.name;
+	};
+	
+	var func_bind = _.bind(func, {name : 'moe'});
+	func_bind('hola');
+	
+	<input type="button" id="ejecutar_bind_parametros" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>delay</h4>
+				<pre>
+	var func = function() {
+	  return 'Retraso de 2 segundos';
+	}
+	_.delay(func, 2000);
+	
+	<input type="button" id="ejecutar_delay" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>keys / values</h4>
+				<pre>
+	_.keys({one : 1, two : 2, three : 3});
+	
+	<input type="button" id="ejecutar_keys" value="Ejecutar" />
+	
+	_.values({one : 1, two : 2, three : 3});
+	
+	<input type="button" id="ejecutar_values" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>functions</h4>
+				<pre>
+	_.functions(_);
+	
+	<input type="button" id="ejecutar_functions" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>extend</h4>
+				<pre>
+	_.extend({name : 'moe'}, {age: 50, userid : 'moe1'});
+	
+	<input type="button" id="ejecutar_extend" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>pick / omit</h4>
+				<pre>
+	_.pick({name : 'moe', age: 50, userid : 'moe1'}, 'name', 'age');
+	
+	<input type="button" id="ejecutar_pick" value="Ejecutar" />
+	
+	_.omit({name : 'moe', age : 50, userid : 'moe1'}, 'age');
+	
+	<input type="button" id="ejecutar_omit" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>defaults</h4>
+				<pre>
+	var iceCream = {flavor : "chocolate"};
+	_.defaults(iceCream, {flavor : "vanilla", sprinkles : "lots"});
+	
+	<input type="button" id="ejecutar_defaults" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>is*</h4>
+				<pre>
+	Existen múltiples funciones que nos permiten realizar comprobaciones sobre los objetos:
+	  - isEqual
+	  - isEmpty
+	  - isArray
+	  - isObject
+	  - isFunction
+	  - ...
+	
+	var moe   = {name : 'moe', luckyNumbers : [13, 27, 34]};
+	var clone = {name : 'moe', luckyNumbers : [13, 27, 34]};
+	console.log(moe == clone);
+	console.log(_.isEqual(moe, clone));
+	
+	<input type="button" id="ejecutar_isEqual" value="Ejecutar" />
+				</pre>
+			</div>
+		</section>
+		<section>
+			<h3>Utilidades</h3>
+			<div>
+				<h4>mixin</h4>
+				<pre>
+	_.mixin({
+	  capitalize : function(string) {
+	    return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
+	  }
+	});
+	_("fabio").capitalize();
+	
+	<input type="button" id="ejecutar_mixin" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>escape / unescape</h4>
+				<pre>
+	_.escape('Curly, Larry & Moe');
+	
+	<input type="button" id="ejecutar_escape" value="Ejecutar" />
+	
+	_.unescape('Curly, Larry &amp;amp; Moe');
+	
+	<input type="button" id="ejecutar_unescape" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>result</h4>
+				<pre>
+	var object = {cheese: 'crumpets', stuff: function(){ return 'nonsense'; }};
+	_.result(object, 'cheese');
+	_.result(object, 'stuff');
+	
+	<input type="button" id="ejecutar_result" value="Ejecutar" />
+				</pre>
+			</div>
+			<div>
+				<h4>template</h4>
+				<pre>
+	var compiled = _.template("hello: <%= name %>");
+	compiled({name : 'moe'});
+	
+	<input type="button" id="ejecutar_template" value="Ejecutar" />
+				</pre>
+			</div>
+		</section>
+		
+		<p>Referencia: <a href="http://underscorejs.org/" title="Página oficial de Underscore.js" target="_blank">http://underscorejs.org/</a></p>
+	</div>
+	
+	<div class="resultados">
+			<h2>RESULTADO</h2>
+			<textarea id="salida" cols="30" rows="5"></textarea>
+		</div>
+		
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="underscore.js"></script>
+		<script type="text/javascript" src="ejemplos_underscore.js"></script>
+	</body>
+</html>

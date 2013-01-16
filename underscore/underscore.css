@@ -1,0 +1,70 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.contenedor {
+	position: relative;
+	margin: 5px auto;
+	width: 1020px;
+}
+
+.contenedor p {
+	font-size: 20px;
+}
+
+.contenedor p a, .contenedor p a:hover, .contenedor p a:visited, .contenedor p a:active, .contenedor p a:link{
+	text-decoration: none;
+	color: #8FCE39;
+}
+
+h1 {
+	color: #4FABDC;
+	margin: 0;
+	padding: 5px 0;
+}
+
+h3 {
+	color: #0060A7;
+}
+
+section div {
+	border: 2px solid #4FABDC;
+	margin-bottom: 10px;
+}
+
+section div  h4{
+	margin-left: 10px;
+}
+
+pre input[type="button"] {
+	border: 2px solid #C0C0C0;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 3px 7px;
+	cursor: pointer;
+}
+
+.resultados {
+	float: right;
+	position: fixed;
+	top: 20px;
+	right: 50px;
+	border: 3px solid #000000;
+	padding: 10px;
+	background-color: #000000;
+}
+
+.resultados  h2 {
+	padding: 0;
+	margin: 0 0 5px 0;
+	color: #FFFFFF;
+}
+
+.resultados textarea {
+	resize: none; 
+	font-size: 24px;
+	font-weight: bold;
+}

@@ -1,5 +1,85 @@
-table{border-spacing:0px;}
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	height: 50px;
+	background: url('../../images/logo-header.png') no-repeat;
+}
+
+.logo p {
+	text-indent: -9999px;
+}
+
+.contenedor {
+	position: relative;
+	margin: 5px auto;
+	width: 1020px;
+}
+
+.ejemplo > div {
+	margin-top: 20px;
+}
+
+h1 {
+	color: #4FABDC;
+	margin: 0;
+	padding: 5px 0;
+}
+
+table {
+	border-spacing: 0;
+	border-bottom: 20px;
+}
+
 table th{
-	text-align:left;
-	background-color:grey;
+	text-align: left;
+	padding-left: 10px;
+	background-color: #8FCE39;
+}
+
+table tr {
+	padding-top: 10px;
+}
+
+table td {
+	padding-left: 10px;
+}
+
+.consola {
+	float: right;
+	position: fixed;
+	top: 20px;
+	right: 50px;
+	border: 3px solid #000000;
+	padding: 10px;
+	background-color: #000000;
+}
+
+.consola  h2 {
+	padding: 0;
+	margin: 0 0 5px 0;
+	color: #FFFFFF;
+}
+
+.consola textarea {
+	resize: none; 
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.consola p {
+	text-align: right;
+	margin: 0;
+}
+
+input[type="button"] {
+	border: 2px solid #C0C0C0;
+	background-color: #4FABDC;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 3px 7px;
+	cursor: pointer;
 }

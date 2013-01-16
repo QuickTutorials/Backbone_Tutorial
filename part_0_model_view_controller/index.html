@@ -1,27 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Ejemplos de Backbone.js: MVC</title>
+    <link href="css/main.css" media="screen" rel="stylesheet" type= "text/css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="logo">
+        <p><a href="http://www.beeva.com/" title="Home de Beeva">Logo de Beeva</a></p>
+      </div>
+      <h1>Ejemplos de Backbone.js: MVC</h1>
+      <div class="ejemplo">
+        <div id="myelement"></div>
+        <div id="myelement2"></div>
+      </div>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta content="text/html; charset=UTF-8" equiv="Content-Type" http="http" />
+      <div class="consola">
+        <h2>CONSOLA</h2>
+        <textarea id="entrada" cols="30" rows="5">myview.model.set({saludo: "hola"})</textarea>
+        <p><input type="button" id="ejecutar" value="Ejecutar" /></p>
+      </div>
+    </div>
 
-  <title>Backbone tutorial, MODEL, VIEW, CONTROLLER</title>
-  <meta content="" name="description" />
-  <meta content="backbone tutorial events" name= "keywords" />
-  <link href="./css/main.css" media="screen" rel="stylesheet" type= "text/css" />
-  <script src="./js/lib/jquery.min.js" type="text/javascript"> </script>
-</head>
-
-<body class="p180">
-  <h1 style="color:red">MODEL VIEW CONTROLLER, INTRODUCTORY EXAMPLE</h1>
-
-  <div class="container">
+    <script src="./js/lib/jquery.min.js" type="text/javascript"> </script>
     <script src="./js/lib/underscore-min.js" type= "text/javascript"> </script>
     <script src="./js/lib/backbone-min.js" type= "text/javascript"> </script>
-
-        <div id="myelement"> </div><br /><br />
-        <div id="myelement2"> </div>
-	<script src="./js/example.js" type= "text/javascript"></script>
-  </div>
-</body>
+  	<script src="./js/example.js" type= "text/javascript"></script> 
+  </body>
 </html>

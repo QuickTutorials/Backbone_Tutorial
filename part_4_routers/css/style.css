@@ -1,18 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 50px;
+  background: url('../../images/logo-header.png') no-repeat;
+}
+
+.logo p {
+  text-indent: -9999px;
+}
+
+.contenedor {
+  position: relative;
+  margin: 5px auto;
+  width: 1020px;
+}
+
+.contenedor a, .contenedor a:hover, .contenedor a:visited, .contenedor a:active, .contenedor a:link{
+	text-decoration: none;
+	color: #8FCE39;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+h1 {
+  color: #4FABDC;
+  margin: 0;
+  padding: 5px 0;
+}
+
+table {
+	width: 100%;
+}
+
+table td {
+	width: 50%;
+	height: 250px;
+	overflow: hidden;
+}
+
+#red {
+	background-color: red;
+}
+
+#orange {
+	background-color: orange;
+}
+
+#yellow {
+	background-color: yellow;
+}
+
+#green {
+	background-color: green;
+}
+
+.treeview {
+	padding-left: 25px;
+}
+
 .treeview ul{ /*CSS for Simple Tree Menu*/
-margin: 0;
-padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .treeview li{ /*Style for LI elements in general (excludes an LI that contains sub lists)*/
-padding-left: 25px;
-margin-bottom: 5px;
+	padding-left: 25px;
+	margin-bottom: 5px;
 }
 
 .treeview li.submenu{ /* Style for LI that contains sub lists (other ULs). */
-cursor: hand !important;
-cursor: pointer !important;
+	cursor: hand !important;
+	cursor: pointer !important;
 }
-
 
 .treeview li.submenu.open{ 
 	background: url(../images/open.gif) no-repeat left 1px;
@@ -29,14 +91,4 @@ cursor: pointer !important;
 
 .treeview .submenu ul li{ /*Style for LIs of ULs that are children of LIs (submenu) */
 cursor: default;
-}
-
-table td{
-	width:50%;
-	height:50%;
-	max-width:50%;
-	min-width:50%;
-	max-height:50%;
-	min-height:50%;
-	overflow:hidden;
 }

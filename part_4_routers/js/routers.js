@@ -1,8 +1,8 @@
 var AppRouter = Backbone.Router.extend({
-        routes: {
-            "tree/:id": "paintTree",
-            "*actions": "defaultRoute" // matches http://example.com/#anything-here
-        }
+  routes: {
+    "tree/:id": "paintTree",
+    "*actions": "defaultRoute" // matches http://example.com/#anything-here
+  }
 });
 
 // Initiate the router
@@ -18,8 +18,11 @@ app_router.on('route:paintTree', function(id) {
 })
 
 app_router.on('route:defaultRoute', function(actions) {
+	$("td").html("");
 	try{
-		alert("your route is: " + actions);
+		if (actions && actions != '') {
+			alert("your route is: " + actions);
+		}
 	}catch(err){}
 })
 

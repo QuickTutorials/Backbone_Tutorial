@@ -1,43 +1,51 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Backbone Tutorial; Views and Templates</title>
+  <head>
+    <title>Ejemplos de Backbone.js: Views & Templates</title>
+    <link href="css/tree.css" media="screen" rel="stylesheet" type= "text/css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="logo">
+        <p><a href="http://www.beeva.com/" title="Home de Beeva">Logo de Beeva</a></p>
+      </div>
+      <h1>Ejemplos de Backbone.js: Views & Templates</h1>
+			
+			<script type="text/html" id="template-branch">
+			    	<ul class="treeview">
+			    	<% _.each(branch, function(item,descripcion) { %>  
+					<% if(typeof item == "object"){ %>
+						<li class=<%= "'submenu open "+counter+"'" %> >
+						<%= descripcion %><%= _.template($('#template-branch').html())({ branch: item,counter:(counter*100) }) %></li>
+					<% }else{ %>
+						<li><%= descripcion %></li> 
+					<% counter++; } %>
+			    	<% }); %>
+			    	</ul>
+			</script>
+
+			<script type="text/html" id="template-tree">
+			  <div class='tree'>
+			    <strong><%= name %></strong><br />
+			    <span><%= email %></span>
+			    <ul class="treeview">
+				<% var counter=1; %>
+			    	<% _.each(items, function(item,descripcion) { %>  
+					<% if(typeof item == "object"){ %>
+						<li class=<%= "'submenu open "+counter+"'" %> >
+						<%= descripcion %><%= _.template($('#template-branch').html())({ branch: item,counter:(counter*100) }) %></li>
+					<% }else{ %>
+						<li><%= descripcion %></li> 
+					<% counter++; } %>
+			    	<% }); %>
+			    <ul>
+			  </div>
+			</script>
+
+			<div id="tree1"></div>
+		</div>
+		
 		<script src="./js/lib/jquery.min.js" type="text/javascript"> </script>
-	</head>
-	<body>
-		<script type="text/html" id="template-branch">
-		    	<ul class="treeview">
-		    	<% _.each(branch, function(item,descripcion) { %>  
-				<% if(typeof item == "object"){ %>
-					<li class=<%= "'submenu open "+counter+"'" %> >
-					<%= descripcion %><%= _.template($('#template-branch').html())({ branch: item,counter:(counter*100) }) %></li>
-				<% }else{ %>
-					<li><%= descripcion %></li> 
-				<% counter++; } %>
-		    	<% }); %>
-		    	</ul>
-		</script>
-
-		<script type="text/html" id="template-tree">
-		  <div class='tree'>
-		    <strong><%= name %></strong><br />
-		    <span><%= email %></span>
-		    <ul class="treeview">
-			<% var counter=1; %>
-		    	<% _.each(items, function(item,descripcion) { %>  
-				<% if(typeof item == "object"){ %>
-					<li class=<%= "'submenu open "+counter+"'" %> >
-					<%= descripcion %><%= _.template($('#template-branch').html())({ branch: item,counter:(counter*100) }) %></li>
-				<% }else{ %>
-					<li><%= descripcion %></li> 
-				<% counter++; } %>
-		    	<% }); %>
-		    <ul>
-		  </div>
-		</script>
-
-		<div id="tree1"></div>
-		<link rel="stylesheet" type="text/css" href="css/tree.css" /> 
 		<script src="./js/lib/underscore-min.js" type= "text/javascript"> </script>
 		<script src="./js/lib/backbone-min.js" type= "text/javascript"> </script>
 		<script type="text/javascript" src="js/tree.js"> </script>

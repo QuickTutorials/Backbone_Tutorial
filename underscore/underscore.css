@@ -3,6 +3,15 @@ body {
 	padding: 0;
 }
 
+.logo {
+	height: 50px;
+	background: url('../images/logo-header.png') no-repeat;
+}
+
+.logo p {
+	text-indent: -9999px;
+}
+
 .contenedor {
 	position: relative;
 	margin: 5px auto;

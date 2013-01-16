@@ -1,8 +1,48 @@
-body{
-	background-color:#5b8255;
+body {
+	margin: 0;
+	padding: 0;
 }
-table{border-spacing:0px;}
+
+.logo {
+	height: 50px;
+	background: url('../../images/logo-header.png') no-repeat;
+}
+
+.logo p {
+	text-indent: -9999px;
+}
+
+.contenedor {
+	position: relative;
+	margin: 5px auto;
+	width: 1020px;
+}
+
+.ejemplo > div {
+	margin-top: 20px;
+}
+
+h1 {
+	color: #4FABDC;
+	margin: 0;
+	padding: 5px 0;
+}
+
+table {
+	border-spacing: 0;
+	border-bottom: 20px;
+}
+
 table th{
-	text-align:left;
-	background-color:grey;
+	text-align: left;
+	padding-left: 10px;
+	background-color: #8FCE39;
+}
+
+table tr {
+	padding-top: 10px;
+}
+
+table td {
+	padding-left: 10px;
 }

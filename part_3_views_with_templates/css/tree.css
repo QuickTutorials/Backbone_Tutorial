@@ -1,18 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    height: 50px;
+    background: url('../../images/logo-header.png') no-repeat;
+}
+
+.logo p {
+    text-indent: -9999px;
+}
+
+.contenedor {
+    position: relative;
+    margin: 5px auto;
+    width: 1020px;
+}
+
+h1 {
+    color: #4FABDC;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.treeview {
+	padding-left: 25px;
+}
+
 .treeview ul{ /*CSS for Simple Tree Menu*/
-margin: 0;
-padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .treeview li{ /*Style for LI elements in general (excludes an LI that contains sub lists)*/
-padding-left: 25px;
-margin-bottom: 5px;
+	padding-left: 25px;
+	margin-bottom: 5px;
 }
 
 .treeview li.submenu{ /* Style for LI that contains sub lists (other ULs). */
-cursor: hand !important;
-cursor: pointer !important;
+	cursor: hand !important;
+	cursor: pointer !important;
 }
-
 
 .treeview li.submenu.open{ 
 	background: white url(../images/open.gif) no-repeat left 1px;
@@ -28,5 +57,5 @@ cursor: pointer !important;
 }
 
 .treeview .submenu ul li{ /*Style for LIs of ULs that are children of LIs (submenu) */
-cursor: default;
+	cursor: default;
 }

@@ -82,8 +82,9 @@ var ListView = Backbone.View.extend({
   },
 
   checkone: function(){
+    var self=this;
     this.collection.each(function(e){
-      e.attributes.checked=$("#check_particip_"+e.attributes.position)[0].checked;
+      e.attributes.checked=$("#check_particip_"+e.attributes.position,self.el)[0].checked;
     });
   },
 
